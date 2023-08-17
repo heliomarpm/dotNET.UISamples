@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<!--<AllowUnsafeBlocks>true</AllowUnsafeBlocks>-->
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CircularProgressBar_NET5" Version="3.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Controls\CircularButton.cs">
+		  <SubType>Component</SubType>
+		</Compile>
+		<Compile Update="Controls\FirstUC.cs">
+		  <SubType>UserControl</SubType>
+		</Compile>
+		<Compile Update="Controls\Line.cs">
+		  <SubType>Component</SubType>
+		</Compile>
+		<Compile Update="Controls\SecondUC .cs">
+		  <SubType>UserControl</SubType>
+		</Compile>
+		<Compile Update="FormAlert.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="frmDark.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="frmDarkMode.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="frmFlatDashboard.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="frmFlatUI.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="frmMain.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="Login\frmLogin.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="Login\frmRegister.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+</Project>
