@@ -11,18 +11,26 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Controls\CircularButton.cs" />
+	  <Compile Remove="Controls\uc_SmoothProgressBar.cs" />
+	  <Compile Remove="Controls\uc_SmoothProgressBar.Designer.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Remove="Controls\uc_SmoothProgressBar.resx" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="CircularProgressBar_NET5" Version="3.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="Controls\CircularButton.cs">
-		  <SubType>Component</SubType>
-		</Compile>
+	  <ProjectReference Include="..\Samples.UIControls\Samples.UIControls.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Compile Update="Controls\FirstUC.cs">
 		  <SubType>UserControl</SubType>
-		</Compile>
-		<Compile Update="Controls\Line.cs">
-		  <SubType>Component</SubType>
 		</Compile>
 		<Compile Update="Controls\SecondUC .cs">
 		  <SubType>UserControl</SubType>

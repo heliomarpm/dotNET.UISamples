@@ -1,9 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Samples.UIForms
+﻿namespace Samples.UIForms
 {
     public partial class frmRegister : Form
     {

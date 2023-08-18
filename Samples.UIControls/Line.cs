@@ -1,9 +1,11 @@
-﻿namespace Samples.UIForms.Controls
+﻿namespace Samples.UIControls
 {
-    class Line : Control
+    public partial class Line : UserControl
     {
-        private int _thckness = 1;
-        private bool _isVertical;
+        public Line()
+        {
+            InitializeComponent();
+        }
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -23,12 +25,16 @@
                 }
             }
         }
+
         protected override void OnPaddingChanged(EventArgs e)
         {
             base.OnPaddingChanged(e);
             Invalidate();
         }
 
+        //public new Color ForeColor { get; set; }
+
+        private bool _isVertical;
         public bool isVertical
         {
             get => _isVertical;
@@ -38,6 +44,8 @@
                 Invalidate();
             }
         }
+
+        private int _thckness;
         public int Thickness
         {
             get => _thckness;
@@ -50,7 +58,5 @@
                     Invalidate();
             }
         }
-
-
     }
 }

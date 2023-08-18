@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Samples.UIForms
+﻿namespace Samples.UIForms
 {
-    public partial class uc_SmoothProgressBar : UserControl
+    public partial class SmoothProgressBar : UserControl
     {
         public enum EBorderStyle
         {
@@ -18,15 +8,17 @@ namespace Samples.UIForms
             Flat = 1
         }
 
-        public uc_SmoothProgressBar()
+        public SmoothProgressBar()
         {
             InitializeComponent();
+            lblProgress.BackColor = Color.Transparent;
         }
 
         protected override void OnResize(EventArgs e)
         {
             // Invalidate the control to get a repaint.
             this.Invalidate();
+            lblProgress.Refresh();
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -48,6 +40,35 @@ namespace Samples.UIForms
             // Clean up.
             brush.Dispose();
             g.Dispose();
+        }
+
+        public new Font Font
+        {
+            get { return lblProgress.Font; }
+            set { lblProgress.Font = value; }
+        }
+
+        public new Color ForeColor
+        {
+            get { return lblProgress.ForeColor; }
+            set { lblProgress.ForeColor = value; }
+        }
+
+        public ContentAlignment TextAlign
+        {
+            get { return lblProgress.TextAlign; }
+            set
+            {
+                lblProgress.TextAlign = value;
+                this.Invalidate();
+                lblProgress.Refresh();
+            }
+        }
+
+        public bool VisibleLabel
+        {
+            get { return lblProgress.Visible; }
+            set { lblProgress.Visible = value; }
         }
 
         private int _min = 0;// Minimum value for progress range
@@ -112,6 +133,8 @@ namespace Samples.UIForms
                 {
                     _value = value;
                 }
+
+                lblProgress.Text = _value.ToString() + "%";
 
                 // Invalidate only the changed area.
                 float percent;
@@ -190,7 +213,7 @@ namespace Samples.UIForms
 
             if (_borderStyle == EBorderStyle.Flat)
             {
-                pen1 = new (_borderColor);
+                pen1 = new(_borderColor);
                 pen2 = new(_borderColor);
             }
             int PenWidth = (int)pen1.Width;

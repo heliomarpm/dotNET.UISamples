@@ -1,6 +1,6 @@
 ﻿namespace Samples.UIForms
 {
-    partial class uc_SmoothProgressBar
+    partial class SmoothProgressBar
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -28,17 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            lblProgress = new Label();
             SuspendLayout();
             // 
-            // uc_SmoothProgressBar
+            // lblProgress
+            // 
+            lblProgress.Dock = DockStyle.Fill;
+            lblProgress.Font = new Font("Verdana", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblProgress.Location = new Point(1, 1);
+            lblProgress.Name = "lblProgress";
+            lblProgress.Size = new Size(254, 8);
+            lblProgress.TabIndex = 0;
+            lblProgress.Text = "0%";
+            lblProgress.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // SmoothProgressBar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Name = "uc_SmoothProgressBar";
+            Controls.Add(lblProgress);
+            Name = "SmoothProgressBar";
+            Padding = new Padding(1);
             Size = new Size(256, 10);
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Label lblProgress;
     }
 }

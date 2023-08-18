@@ -1,7 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
-
-namespace Samples.UIForms
+﻿namespace Samples.UIForms
 {
     public partial class frmMain : Form
     {
@@ -84,7 +81,7 @@ namespace Samples.UIForms
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-           // Application.Exit();
+            // Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)

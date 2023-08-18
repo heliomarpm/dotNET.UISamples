@@ -1,5 +1,3 @@
-using CircularProgressBar_NET5;
-
 namespace Samples.UIForms
 {
     public partial class FormSplash : Form
@@ -23,7 +21,6 @@ namespace Samples.UIForms
             this.TopMost = true;
 
             this.Animate(700, WinAPI.EFlagAnimate.BLEND);
-            spb.Value = 0;
 
             StartProgress();
             base.OnLoad(e);
@@ -48,7 +45,7 @@ namespace Samples.UIForms
             while (true)
             {
                 await Task.Delay(50);
-                pgb.Value += 1;
+                pgb.Increment(1);
                 spb.Value += 1;
                 circularProgressBar1.Value += 1;
                 circularProgressBar1.Text = $"{circularProgressBar1.Value}%";

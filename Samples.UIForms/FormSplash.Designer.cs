@@ -35,7 +35,7 @@
             timer1 = new System.Windows.Forms.Timer(components);
             pgb = new ProgressBar();
             pnlProgresso = new Panel();
-            spb = new uc_SmoothProgressBar();
+            spb = new SmoothProgressBar();
             pnlProgresso.SuspendLayout();
             SuspendLayout();
             // 
@@ -117,15 +117,18 @@
             // spb
             // 
             spb.BorderColor = Color.White;
-            spb.BorderStyle = uc_SmoothProgressBar.EBorderStyle.Flat;
-            spb.Location = new Point(38, 198);
+            spb.BorderStyle = SmoothProgressBar.EBorderStyle.Flat;
+            spb.Location = new Point(38, 191);
             spb.Maximum = 100;
             spb.Minimum = 0;
             spb.Name = "spb";
-            spb.ProgressBarColor = Color.RoyalBlue;
-            spb.Size = new Size(618, 10);
-            spb.TabIndex = 5;
+            spb.Padding = new Padding(1);
+            spb.ProgressBarColor = Color.White;
+            spb.Size = new Size(618, 17);
+            spb.TabIndex = 6;
+            spb.TextAlign = ContentAlignment.MiddleCenter;
             spb.Value = 0;
+            spb.VisibleLabel = true;
             // 
             // FormSplash
             // 
@@ -158,6 +161,6 @@
         private System.Windows.Forms.Timer timer1;
         private ProgressBar pgb;
         private Panel pnlProgresso;
-        private uc_SmoothProgressBar spb;
+        private SmoothProgressBar spb;
     }
 }
