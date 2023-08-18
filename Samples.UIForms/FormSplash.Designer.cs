@@ -118,14 +118,14 @@
             // 
             spb.BorderColor = Color.White;
             spb.BorderStyle = SmoothProgressBar.EBorderStyle.Flat;
-            spb.Location = new Point(38, 191);
+            spb.Location = new Point(42, 192);
             spb.Maximum = 100;
             spb.Minimum = 0;
             spb.Name = "spb";
             spb.Padding = new Padding(1);
             spb.ProgressBarColor = Color.White;
-            spb.Size = new Size(618, 17);
-            spb.TabIndex = 6;
+            spb.Size = new Size(610, 16);
+            spb.TabIndex = 5;
             spb.TextAlign = ContentAlignment.MiddleCenter;
             spb.Value = 0;
             spb.VisibleLabel = true;
