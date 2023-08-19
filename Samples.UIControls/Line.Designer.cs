@@ -34,9 +34,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Margin = new Padding(0);
             Name = "Line";
-            Size = new Size(328, 3);
+            Size = new Size(134, 2);
             ResumeLayout(false);
         }
 
