@@ -37,7 +37,7 @@ namespace Samples.UIForms
             line1 = new Line();
             btnFormClose = new Button();
             lblTitle = new Label();
-            line2 = new Line();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -130,23 +130,20 @@ namespace Samples.UIForms
             // lblTitle
             // 
             lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.Location = new Point(131, 9);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(65, 22);
+            lblTitle.Size = new Size(49, 25);
             lblTitle.TabIndex = 10;
-            lblTitle.Text = "label1";
+            lblTitle.Text = "Title";
             // 
-            // line2
+            // label1
             // 
-            line2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            line2.BorderStyle = Line.ELineStyle.Line3D;
-            line2.Location = new Point(131, 33);
-            line2.Margin = new Padding(0);
-            line2.Name = "line2";
-            line2.Size = new Size(445, 2);
-            line2.TabIndex = 11;
-            line2.Thickness = 1;
-            line2.Vertical = false;
+            label1.Location = new Point(131, 52);
+            label1.Name = "label1";
+            label1.Size = new Size(442, 107);
+            label1.TabIndex = 11;
+            label1.Text = "message";
             // 
             // FormMessage
             // 
@@ -154,7 +151,7 @@ namespace Samples.UIForms
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(48, 48, 48);
             ClientSize = new Size(585, 240);
-            Controls.Add(line2);
+            Controls.Add(label1);
             Controls.Add(lblTitle);
             Controls.Add(btnFormClose);
             Controls.Add(line1);
@@ -183,6 +180,6 @@ namespace Samples.UIForms
         private Line line1;
         private Button btnFormClose;
         private Label lblTitle;
-        private Line line2;
+        private Label label1;
     }
 }

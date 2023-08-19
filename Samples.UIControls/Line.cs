@@ -32,16 +32,16 @@ namespace Samples.UIControls
         /// <param name="width">The new <see cref="P:System.Windows.Forms.Control.Width"/> property value of the control.</param>
         /// <param name="height">The new <see cref="P:System.Windows.Forms.Control.Height"/> property value of the control.</param>
         /// <param name="specified">A bitwise combination of the <see cref="T:System.Windows.Forms.BoundsSpecified"/> values.</param>
-        protected override void SetBoundsCore(int x, int y, int width, int height, BoundsSpecified specified)
-        {
-            int qtdLine = _lineStyle == ELineStyle.Line3D ? 2 : 1;
-            if (!_isVertical)
-                height = (_thickness * qtdLine) + 0;
-            else
-                width = (_thickness * qtdLine) + 0;
+        //protected override void SetBoundsCore(int x, int y, int width, int height, BoundsSpecified specified)
+        //{
+        //    int qtdLine = _lineStyle == ELineStyle.Line3D ? 2 : 1;
+        //    if (!_isVertical)
+        //        height = (_thickness * qtdLine) + 0;
+        //    else
+        //        width = (_thickness * qtdLine) + 0;
 
-            base.SetBoundsCore(x, y, width, height, specified);
-        }
+        //    base.SetBoundsCore(x, y, width, height, specified);
+        //}
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -131,12 +131,12 @@ namespace Samples.UIControls
         /// <summary>
         /// Prevents resizing
         /// </summary>
-        public override SelectionRules SelectionRules
-        {
-            get
-            {
-                return SelectionRules.LeftSizeable | SelectionRules.RightSizeable | SelectionRules.Moveable | SelectionRules.Visible;
-            }
-        }
+        //public override SelectionRules SelectionRules
+        //{
+        //    get
+        //    {
+        //        return SelectionRules.LeftSizeable | SelectionRules.RightSizeable | SelectionRules.Moveable | SelectionRules.Visible;
+        //    }
+        //}
     }
 }
